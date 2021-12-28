@@ -4,8 +4,8 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/contact",
-        destination: "/form",
+        source: "/old/:id*",
+        destination: "/new/:id*",
         permanent: false,
       },
     ];
