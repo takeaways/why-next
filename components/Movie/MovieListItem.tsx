@@ -18,7 +18,16 @@ function MovieListItem({ movie, onClick }: Props) {
   return (
     <div className="movie" key={movie.id} onClick={handleClickMovie}>
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
-      <Link key={movie.id} href={getMovieDetailPagePath(movie.id)}>
+      <Link
+        key={movie.id}
+        href={{
+          pathname: getMovieDetailPagePath(movie),
+          // query: {
+          //   title: movie.original_title,
+          // },
+        }}
+        // as={`/movies/${movie.id}`}
+      >
         <a>
           <h4>{movie.original_title}</h4>
         </a>

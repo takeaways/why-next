@@ -20,13 +20,14 @@ const Home = ({ movies }: Props) => {
   const handleClickMovie = useCallback(
     (movie: MovieType) => {
       router.push(
-        {
-          pathname: getMovieDetailPagePath(movie.id),
-          query: {
-            title: movie.original_title,
-          },
-        },
-        `/movies/${movie.id}`,
+        getMovieDetailPagePath(movie),
+        // {
+        //   pathname: getMovieDetailPagePath(movie),
+        //   query: {
+        //     title: movie.original_title,
+        //   },
+        // },
+        // `/movies/${movie.id}`,
       );
     },
     [router],
