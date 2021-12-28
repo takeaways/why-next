@@ -8,11 +8,26 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <a>Home</a>
+        <a className={router.pathname !== "/about" ? "active" : ""}>Home</a>
       </Link>
       <Link href="/about">
-        <a>About</a>
+        <a className={router.pathname === "/about" ? "active" : ""}>About</a>
       </Link>
+      <style jsx>{`
+        nav {
+          color: white;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          padding: 5px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+        .active {
+          color: yellow;
+        }
+      `}</style>
     </nav>
   );
 };

@@ -1,13 +1,15 @@
-import React from "react";
+import Head from "next/head";
 
-import Navbar from "components/navbar/Navbar";
+import Seo from "components/Seo";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
-      <div>Home</div>
-    </div>
+    <>
+      <Seo title="Home" />
+      <div>
+        <div>Home</div>
+      </div>
+    </>
   );
 };
 
