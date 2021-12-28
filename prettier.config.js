@@ -3,7 +3,15 @@ module.exports = {
   tabWidth: 2,
   trailingComma: "all",
   semi: true,
-  importOrder: ["^@core/(.*)$", "^pages/(.*)$", "^components/(.*)$", "^@ui/(.*)$", "^[./]"],
+  importOrder: [
+    "^@core/(.*)$",
+    "^next/(.*)$",
+    "^pages/(.*)$",
+    "^components/(.*)$",
+    "^types/(.*)$",
+    "^@ui/(.*)$",
+    "^[./]",
+  ],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };

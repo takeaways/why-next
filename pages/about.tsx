@@ -1,8 +1,8 @@
-import Head from "next/head";
 import React from "react";
 
+import Head from "next/head";
+
 import Seo from "components/Seo";
-import Navbar from "components/navbar/Navbar";
 
 const About = () => {
   return (
